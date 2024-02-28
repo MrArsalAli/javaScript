@@ -75,3 +75,33 @@ var t = 3;
 var result11 = s - 1 / t;
 
 console.log(result11);
+
+//q12
+var u = 11;
+var v = 3;
+var result12 = u - (v + 2);
+
+console.log(result12);
+
+//q13
+var w = 22;
+var x = 5;
+var result13 = w + (x ** 2);
+
+console.log(result13);
+
+//q14
+var y = 19;
+var z = 4;
+var result14 = y % (z + 1);
+
+console.log(result14);
+
+//q15
+var a = 10;
+var b = 3;
+var result15 = a * (b - 2);
+
+console.log(result15);
+
+
