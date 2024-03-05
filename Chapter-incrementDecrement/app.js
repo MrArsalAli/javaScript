@@ -39,7 +39,7 @@ score--
 console.log(score);
 
 var c = 20;
-++c 
+++c
 
 console.log(c);
 
