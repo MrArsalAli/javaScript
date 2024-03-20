@@ -101,13 +101,13 @@
 // }
 
 
-var char = prompt(`Enter a Character to identify either its a vowel or consonant`)
+// var char = prompt(`Enter a Character to identify either its a vowel or consonant`)
 
-if (char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u') {
-    console.log(`Vowel`)
-} else {
-    console.log(`Consonant`)
-} 
+// if (char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u') {
+//     console.log(`Vowel`)
+// } else {
+//     console.log(`Consonant`)
+// } 
 
 
 
