@@ -33,6 +33,27 @@ for (i = 1; i <= 20; i++) {
 
 //table via loop
 
-for(a = 1; a<=10; a++){
-    console.log(a*6)
+for (a = 1; a <= 10; a++) {
+    console.log(a * 6)
 }
+
+for(a = 1; a < 10; a++){
+    console.log();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

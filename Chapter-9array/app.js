@@ -72,7 +72,7 @@ console.log(copyAll);
 
 
 
-//indexOf
+//  indexOf
 var students = [213, 2142, 421, 2321, 21, 242, 54, 523, 123];
 var userRollNumber = +prompt("Enter user roll number");
 
