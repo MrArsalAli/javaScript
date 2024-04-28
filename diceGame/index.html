@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>diceGame</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Dice Game</h1>
+
+    <div class="container">
+        <div onclick="diceGenerator(1)" class="box">1</div>
+        <div onclick="diceGenerator(2)" class="box">2</div>
+        <div onclick="diceGenerator(3)" class="box">3</div>
+        <div onclick="diceGenerator(4)" class="box">4</div>
+        <div onclick="diceGenerator(5)" class="box">5</div>
+        <div onclick="diceGenerator(6)" class="box">6</div>
+    </div>
+    <div class="container">
+        <div class="infoBox" >User Number : <span id="user_Number">3</span></div>
+        <div class="infoBox">Random Number : <span id="random_Number">2</span> </div>
+        <div class="infoBox" id="result">Result : Win/Loss</div>
+    </div>
+    <div class="container">
+        <div class="infoBox">Turns : <span id="total"> 10</span> </div>
+        <div class="infoBox">Wins : <span id="win"> 0</span></div>
+        <div class="infoBox">Loss : <span id="loss"> 0</span> </div>
+    </div>
+
+    <h2 id="msg">You Only Have Ten Attempts,
+    Conquer three times to win the battle:Go Try Your Luck!
+    </h2>
+
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

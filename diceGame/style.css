@@ -1,0 +1,43 @@
+*{
+    font-family: Courier New, Courier, monospace;
+    font-weight: bolder;
+    background-color: aliceblue;
+}
+
+
+h1, h2{
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px 8px;
+    height: 120px;
+    width: 80px;
+    border: 1px solid skyblue;
+    border-radius: 22px;
+    font-size: 36px;
+}
+.box:hover{
+    background-color: gray;
+    color: skyblue;
+}
+
+.infoBox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid skyblue;
+        border-radius: 12px;
+        font-size: 16px;
+        height: 40px;
+        width: 200px;
+        margin: 2px 8px;
+}
