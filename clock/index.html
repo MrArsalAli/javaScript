@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clock</title>
+    <style>
+        *{
+            font-family: Courier New, Courier, monospace;
+        }
+        .heading {
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .items {
+            display: flex;
+            background-color: black;
+            color: white;
+            margin: 10px;
+            padding: 10px;
+            align-items: center;
+            justify-content: center;
+            font-weight: bolder;
+        }
+
+        #hours {
+            height: 110px;
+            width: 110px;
+            font-size: 52px;
+            border-radius: 70px;
+        }
+
+        #minutes {
+            height: 80px;
+            width: 80px;
+            font-size: 42px;
+            border-radius: 60px;
+
+        }
+
+        #seconds {
+            height: 60px;
+            width: 60px;
+            font-size: 30px;
+            border-radius: 60px;
+        }
+        #amPm{
+            font-size: 20px;
+            height: 20px;
+            width: 20px;
+            margin: 0px 0px;
+            margin-top: 50px;
+            border-radius: 40px;
+        }
+        #dates{
+            display: flex;
+            justify-content: center;
+            height: 20px;
+            width: 130px;
+            padding: 8px;
+            font-size: 22px;
+            border-radius: 12px;
+        }
+        #btn{
+            justify-content: center;
+            font-size: 18px;
+            border-radius: 16px;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <h1 class="heading">Clock</h1>
+    <div class="container">
+        <div class="items" id="hours">00</div>
+        <div class="items" id="minutes">00</div>
+        <div class="items" id="seconds">00</div>
+        <div class="items" id="amPm"></div>
+    </div>
+    <div class="container">
+        <div class="items" id="dates"></div>
+    </div>
+    <div class="container">
+        <button onclick="formatChanger()" id="btn">Change Format</button>
+    </div>
+
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

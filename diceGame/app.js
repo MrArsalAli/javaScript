@@ -31,9 +31,9 @@ function diceGenerator(userNumber) {
 function CheckResult(){
     if (count == 0) {
         if (wins >= 3) {
-            msg.innerText="You are lucky,You Won The Game"
+            msg.innerText="You Won The Game"
         }else{
-            msg.innerText="Sorry! You didn't Won"
+            msg.innerText="Try Again You didn't Won"
         }
     }
 
