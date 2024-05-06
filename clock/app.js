@@ -8,60 +8,51 @@ var btn = document.getElementById("btn");
 
 setInterval(function () {
     var date = new Date();
-    
     hours_HTML.innerText = date.getHours();
     minutes_HTML.innerText = date.getMinutes();
     seconds_HTML.innerText = date.getSeconds();
     dates.innerText = date.toLocaleDateString();
-    if (hours_HTML >= 12) {
-        amPm.innerText = "PM"
-    }else{
-        amPm.innerText = "AM"
+
+    if (date.getHours() >= 12) {
+        amPm.innerText = "PM";
+    } else {
+        amPm.innerText = "AM";
     }
-    
-    // checkamPM();
+    if (date.getHours() < 10) {
+        hours_HTML.innerText = "0" + date.getHours();
+    }
+    if (date.getMinutes() < 10) {
+        minutes_HTML.innerText = "0" + date.getMinutes();
+    }
+    if (date.getSeconds() < 10) {
+        seconds_HTML.innerText = "0" + date.getSeconds();
+    }
+
+    if (date.getHours() > 12) {
+        hours_HTML.innerText = (date.getHours() - 12);
+    } else {
+        hours_HTML.innerText = date.getHours();
+    }
+
+
 }, 1000);
 
 
-function formatChanger(){
-    if (hours_HTML >= 12) {
-        amPm.innerText= 12 - (date.getHours());
-    }
+function themeChanger() {
+    hours_HTML.style.backgroundColor = "white";
+    minutes_HTML.style.backgroundColor = "white";
+    seconds_HTML.style.backgroundColor = "white";
+    amPm.style.backgroundColor = "white";
+    dates.style.backgroundColor = "white";
+    btn.style.backgroundColor = "white";
+    hours_HTML.style.color = "black";
+    minutes_HTML.style.color = "black";
+    seconds_HTML.style.color = "black";
+    amPm.style.color = "black";
+    dates.style.color = "black";
+    btn.style.color = "black";
 }
 
-// function checkamPM() {
-//     if (hours_HTML >= 12) {
-//         amPm.innerText = "AM";
-//     } else {
-//         amPm.innerText = "PM";
-//     }
-//     if (hours_HTML < 10) {
-//         hours_HTML.innerText = "0" + date.getHours();
-//     }
-//     if (minutes_HTML < 10) {
-//         minutes_HTML.innerText = "0" + date.getMinutes();
-//     }
-//     if (seconds_HTML < 10) {
-//         seconds_HTML.innerText = "0" + date.getSeconds();
-//     }
-// }
 
 
 
-
-
-// setInterval( function(){
-//     var date = new Date();
-//     var hours = date.getHours();
-//     var minutes = date.getMinutes();
-//     var seconds = date.getSeconds();
-//     if (hours < 10) {hours = "0" + hours}
-//     if (minutes < 10) {hours = "0" + minutes}
-//     if (seconds < 10) {hours = "0" + seconds}
-    
-    
-//     hours_HTML.innerText = hours;
-//     minutes_HTML.innerText = minutes;
-//     seconds_HTML.innerText = seconds;
-
-// }, 1000);
