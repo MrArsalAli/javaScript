@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25+Charted&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Jersey 25 Charted", sans-serif; 
+    font-weight: 400;
+    font-style: normal; 
+    font-size: 58px;
+    background-color: lightsteelblue;
+}
+h1{
+    text-align: center;
+    margin-bottom: 150px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 54px;
+}
+.buttons{
+    font-size: 22px;
+    margin: 16px;
+    padding: 4px;
+    border: 2px solid blue;
+    border-radius: 12px;
+    font-family: Courier New, Courier, monospace;
+    font-weight: bolder;
+}
+.buttons:hover{
+    cursor: pointer;
+}
