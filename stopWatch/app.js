@@ -33,7 +33,7 @@ function stop() {
 };
 function reset() {
     clearInterval(watchInterval);
-    btn.disabled = true;
+    btn.disabled = false;
     minutes = 0;
     seconds = 0;
     mSeconds = 0;

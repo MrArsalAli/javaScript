@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>quickStop</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jersey+25+Charted&display=swap');
+        *{
+            font-size: 44px;
+            margin: 0px;
+            padding: 0px;
+            font-family: "Jersey 25 Charted", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            background-color: lightgrey;
+        }
+        .heading{
+            text-align: center;
+            margin-bottom: 12px;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        input{
+            line-height: 30px;
+            border-radius: 12px;
+        }
+        .btn{
+            border: 2px solid black;
+            border-radius: 12px;
+            margin: 0px 4px;
+            padding: 0px 22px;
+        }
+        .btn:hover{
+            cursor: pointer;
+            background-color: black;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    
+
+    <h1 class="heading">quickStop</h1>
+
+    <h1  class="heading" id="no">00</h1>
+    <div class="container">
+        <input type="number" placeholder="Enter The Number" id="user_input">
+    </div>
+
+    <h2  class="heading" id="result">--</h2>
+
+
+
+    <div class="container">
+        <button class="btn" id="start" onclick="start()">Start</button>
+        <button class="btn" id="stop" onclick="stop()">Stop</button>
+    </div>
+
+    <span id="msg"></span>
+
+
+        
+       <ul>
+            <li>1.You have to click before 1000</li>
+            <li>2.If number matches your number then you will win else Loss</li>
+        </ul> 
+    
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
