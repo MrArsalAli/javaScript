@@ -1,0 +1,58 @@
+body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8px;
+}
+
+.items{
+    margin: 0px 8px;
+    padding: 0px 10px;
+    font-size: 40px;
+    border-radius: 26px;
+    cursor: pointer;
+}
+
+#user_input{
+    padding: 12px 6px;
+    font-size: 18px;
+    width: 250px;
+    border: 2px solid black;
+    border-radius: 6px;
+}
+#multiply{
+    background-color: orange;
+    padding:0px 12px;
+}
+#minus{
+    padding:0px 16px;
+    background-color: orange;
+}
+#plus{
+    padding:0px 10px;
+    background-color: orange;
+}
+#dot{
+    padding:0px 16px;
+}
+#divide{
+    padding:0px 16px;
+    background-color: orange;
+}
+
+#isEqualTo{
+    background-color: orange;
+}
+
+#clear{
+    justify-content: center;
+    padding: 0px 90px;
+}

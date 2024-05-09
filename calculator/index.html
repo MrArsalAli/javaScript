@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <input type="text" placeholder="Calculate" id="user_input">
+        </div>
+        <div class="container">
+            <button class="items" id="seven" onclick="sevens('7')">7</button>
+            <button class="items" id="eight" onclick="eights('8')">8</button>
+            <button class="items" id="nine" onclick="nines('9')">9</button>
+            <button class="items" id="multiply" onclick="multiplies('*')">*</button>
+        </div>
+        <div class="container">
+            <button class="items" id="four" onclick="fours('4')">4</button>
+            <button class="items" id="five" onclick="fives('5')">5</button>
+            <button class="items" id="six" onclick="sixes('6')">6</button>
+            <button class="items" id="minus" onclick="minuses('-')">-</button>
+        </div>
+        <div class="container">
+            <button class="items" id="ones" onclick="ones('1')">1</button>
+            <button class="items" id="two" onclick="twos('2')">2</button>
+            <button class="items" id="three" onclick="threes('3')">3</button>
+            <button class="items" id="plus" onclick="pluses('+')">+</button>
+        </div>
+        <div class="container">
+            <button class="items" id="zero" onclick="zeros('0')">0</button>
+            <button class="items" id="dot" onclick="dots('.')">.</button>
+            <button class="items" id="divide" onclick="divides('/')">/</button>
+            <button class="items" id="isEqualTo" onclick="calculates()">=</button>
+        </div>
+        <button class="items" id="clear" onclick="clearDisplay()">Clear</button>
+    </div>
+
+
+
+
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
