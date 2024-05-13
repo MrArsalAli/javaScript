@@ -1,0 +1,60 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    background-color: yellowgreen;
+    /* border: 1px solid black; */
+}
+
+h1{
+    text-align: center;
+    font-family: Courier New, Courier, monospace;
+    font-size: 60px;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#counter{
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 50px;
+    height: 250px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+#screen{
+    font-size: 48px;
+    text-align: center;
+    height: 100px;
+    width: 250px;
+}
+
+#output{
+    font-size: 50px;
+}
+
+#btn{
+    font-size: 20px;
+    padding: 6px;
+    margin: 2px 12px;
+    border: 2px solid black;
+    font-weight: bolder;
+    border-radius: 24px;
+}
+
+#btn:hover{
+    cursor: pointer;
+}
+
+#message{
+    font-size: 48px;
+    font-family: Courier New, Courier, monospace;
+    font-weight: bolder;
+    margin: 40px 0px;
+}
