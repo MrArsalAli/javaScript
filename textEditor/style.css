@@ -1,0 +1,37 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    /* border: 1px solid black; */
+}
+
+h1{
+    text-align: center;
+    color: blue;
+    cursor: pointer;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+textarea{
+    border: 2px solid blue;
+    border-radius: 10px;
+    font-size: 18px;
+}
+.items {
+    padding: 14px;
+    font-weight: bolder;
+    font-size: 28px;
+    cursor: pointer;
+}   
+
+
+.miniContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
