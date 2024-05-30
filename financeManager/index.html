@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Finance Manager</h1>
+    <div class="container">
+        <h1>Income : </h1>
+        <input id="income" class="items" type="text" placeholder="Income">
+        <button class="btn" onclick="addIncome()">Add</bsutton>
+    </div>
+
+
+    <div class="container">
+        <h1>Expenses : </h1>
+        <input id="expenses" class="items" type="text" placeholder="Expenses">
+        <button class="btn" onclick="addExpense()">Add</button>
+    </div>
+
+    <div class="container">
+        <h1>Income : </h1>
+        <span id="income_output" class="items">00</span>
+    </div>
+
+    <div class="container">
+        <h1>Expenses : </h1>
+        <span id="expenses_output" class="items">00</span>
+    </div>
+
+    <div class="container">
+        <h1>Savings : </h1>
+        <span id="savings" class="items">00</span>
+        <button class="btn" onclick="calculateSavings()">Account</button>
+        <button class="btn" id="clearBtn" onclick="clearEverything()">Clear</button>
+    </div>
+
+
+
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

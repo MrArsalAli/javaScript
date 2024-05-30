@@ -1,0 +1,61 @@
+
+
+
+
+
+body{
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+    /* border: 1px solid black; */
+}
+
+h1{
+    text-align: center;
+}
+
+.container{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.items{
+    margin: 12px 18px;
+}
+
+input{
+    font-size: 22px;
+    padding: 6px 18px;
+}
+
+.btn{
+    border: 1px solid black;
+    border-radius: 6px;
+    font-size: 20px;
+}
+
+#clearBtn{
+    margin: 0px 28px;
+    padding: 2px;
+    font-size: 28px;
+    color: wheat;
+    background-color: black;
+}
+#income_output{
+    /* border: 1px solid black; */
+    font-size: 22px;
+    padding: 6px 18px;
+}
+
+#expenses_output{
+    /* border: 1px solid black; */
+    font-size: 22px;
+    padding: 6px 18px;
+}
+
+#savings{
+    font-size: 22px;
+}
