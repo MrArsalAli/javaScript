@@ -1,17 +1,12 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
 import {
-    getAuth,
-    onAuthStateChanged,
-    createUserWithEmailAndPassword,
-    signInWithEmailAndPassword,
-    signOut,
+    getAuth, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut,
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import { getStorage, ref , uploadBytes } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js";
 
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
 const firebaseConfig = {
     apiKey: "AIzaSyBybm7S6hPo_FRKNtDeysga7ftlMsAix_8",
     authDomain: "smit-bc807.firebaseapp.com",
@@ -22,27 +17,21 @@ const firebaseConfig = {
     measurementId: "G-07W1WB249S"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-// console.log("app-->", app);
-
 const auth = getAuth(app);
-// console.log("auth-->", auth);
+const storage = getStorage(firebaseApp, "gs://my-custom-bucket");
+const storage = getStorage();
+const storageRef = ref(storage);
 
 var signUpEmail = document.getElementById('signUpEmail');
 var signUpPassword = document.getElementById('signUpPassword');
 var signUpButton = document.getElementById('signUpButton');
+
 var signInEmail = document.getElementById('signInEmail');
 var signInPassword = document.getElementById('signInPassword');
 var signInButton = document.getElementById('signInButton');
-var signOutEmail = document.getElementById('signOutEmail');
-var signOutPassword = document.getElementById('signOutPassword');
-var signOutButton = document.getElementById('signOutButton');
 
-signUpButton.addEventListener("click", createUserAccount)
-signInButton.addEventListener("click", signIn);
-signOutButton.addEventListener("click", logOut);
+var signOutButton = document.getElementById('signOutButton');
 
 onAuthStateChanged(auth, (user) => {
     if (user) {
@@ -54,41 +43,44 @@ onAuthStateChanged(auth, (user) => {
     }
 });
 
+signUpButton.addEventListener("click", createUserAccount)
 function createUserAccount() {
-    // console.log("Email-->", signUpEmail.value);
-    // console.log("Password-->", signUpPassword.value);
-    createUserWithEmailAndPassword(auth, signUpEmail, signUpPassword)
+    createUserWithEmailAndPassword(auth, signUpEmail.value, signUpPassword.value)
         .then((userCredential) => {
-            // Signed up 
             const user = userCredential.user;
-            // ...
         })
         .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
             alert(errorMessage);
-            // ..
         });
 
 }
 
 
+signInButton.addEventListener("click", signIn);
 function signIn() {
-    signInWithEmailAndPassword(auth, signInEmail, signInPassword)
+    signInWithEmailAndPassword(auth, signInEmail.value, signInPassword.value)
         .then((userCredential) => {
             const user = userCredential.user;
         })
         .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
+            alert(errorMessage);
         });
 
 }
 
+signOutButton.addEventListener("click", logOut);
 function logOut() {
     signOut(auth).then(() => {
-        // Sign-out successful.
     }).catch((error) => {
-        // An error happened.
+        alert(error);
     });
 }
+
+
+uploadBytes(storageRef, file).then((snapshot) => {
+    console.log('Uploaded a blob or file!');
+  });

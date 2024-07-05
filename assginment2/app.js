@@ -86,14 +86,14 @@ async function deleteTodo() {
 
 addNumberToDB();
 async function addNumberToDB() {
-  try {
-    const docRef = await addDoc(numbersCollection, {
-      number: Math.round(Math.random() * 1000000),
-    });
+    try {
+        const docRef = await addDoc(numbersCollection, {
+            number: Math.round(Math.random() * 1000000),
+        });
 
-    console.log("docRef=>", docRef);
-    console.log("Document written with ID: ", docRef.id);
-  } catch (e) {
-    console.error("Error adding document: ", e);
-  }
+        console.log("docRef=>", docRef);
+        console.log("Document written with ID: ", docRef.id);
+    } catch (e) {
+        console.error("Error adding document: ", e);
+    }
 }
