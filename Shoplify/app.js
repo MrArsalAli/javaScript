@@ -3,6 +3,8 @@ import {
     onAuthStateChanged,
     signOut,
     db,
+    storage,
+    
     getDoc,
     doc,
 
