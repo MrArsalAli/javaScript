@@ -39,7 +39,7 @@ onAuthStateChanged(auth, (user) => {
 
 logOutBtn.addEventListener("click", () => {
     signOut(auth).then(() => {
-        window.location.href = "/"
+        window.location.href = "index.html"
     })
 })
 

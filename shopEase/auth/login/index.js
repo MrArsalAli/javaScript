@@ -28,7 +28,7 @@ signInForm.addEventListener("submit", function(e){
     signInWithEmailAndPassword(auth, email, password)
   .then((user) => {
       console.log("signedIn");
-      window.location.href = "/"
+      window.location.href = "../../index.html"
     
       
   })
