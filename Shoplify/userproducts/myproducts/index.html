@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Products</title>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+</head>
+<body>
+    <section class="bg-gray-50 dark:bg-gray-900">
+        <div class="mt-10 flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+            <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+                <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+                    <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+                        Add a product
+                    </h1>
+                    <form id="addprdForm" class="space-y-6">
+                        <div>
+                            <label for="productName" class="block mb-2 text-sm font-medium text-gray-700">Product Name:</label>
+                            <input type="text" id="productName" name="productName" class="block w-full p-2 border border-gray-300 rounded-md" required>
+                        </div>
+                        <div>
+                            <label for="price" class="block mb-2 text-sm font-medium text-gray-700">Price:</label>
+                            <input type="number" id="price" name="price" step="0.01" class="block w-full p-2 border border-gray-300 rounded-md" required>
+                        </div>
+                        <div>
+                            <label for="description" class="block mb-2 text-sm font-medium text-gray-700">Description:</label>
+                            <textarea id="description" name="description" rows="4" class="block w-full p-2 border border-gray-300 rounded-md" required></textarea>
+                        </div>
+                        <div>
+                            <label for="image" class="block mb-2 text-sm font-medium text-gray-700">Upload Image:</label>
+                            <input type="file" id="image" name="image" accept="image/*" class="block w-full text-sm text-gray-700 border border-gray-300 rounded-md cursor-pointer focus:outline-none"
+                                required>
+                        </div>
+                        <div>
+                            <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+    <script src="app.js" type="module"></script>
+</body>
+</html>

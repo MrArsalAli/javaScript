@@ -1,18 +1,19 @@
 import {
+    getAuth,
     auth,
     onAuthStateChanged,
     signOut,
     db,
     storage,
-    
-    getDoc,
     doc,
-
+    getDoc,
 } from './utils/utils.js';
 
 
 const signup_btn = document.getElementById('signup_btn');
 const userImage = document.getElementById('userImage');
+
+
 
 onAuthStateChanged(auth, (user) => {
     if (user) {
