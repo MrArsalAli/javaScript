@@ -20,7 +20,7 @@ signInForm.addEventListener("submit", function(e){
 
     const userInfo = {
         email,
-        password
+        password,
     }
 
 

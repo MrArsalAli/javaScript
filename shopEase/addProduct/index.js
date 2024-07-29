@@ -22,7 +22,6 @@ userProducts.addEventListener("submit", function (e) {
         price: e.target[3].value,
         createdBy : auth.currentUser.uid,
         createdByEmail : auth.currentUser.email,
-
     }
     const imgRef = ref(storage, productInfo.productImage.name)
     uploadBytes(imgRef, productInfo.productImage)

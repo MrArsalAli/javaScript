@@ -1,18 +1,21 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-import { getAuth,
+import {
+    getAuth,
     onAuthStateChanged,
-    createUserWithEmailAndPassword, 
-    signInWithEmailAndPassword, 
-    signOut ,
-    
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    signOut,
+
 } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js";
-import { getStorage,
+import {
+    getStorage,
     ref,
-    uploadBytes, 
+    uploadBytes,
     getDownloadURL,
-    
+
 } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-storage.js";
-import { getFirestore,
+import {
+    getFirestore,
     doc,
     setDoc,
     addDoc,
@@ -21,7 +24,7 @@ import { getFirestore,
     collection,
     query,
     where,
-    } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
+} from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyA0JKI26kTLyAntN8fAeZRPpT-8N6E1QJ4",
@@ -42,13 +45,13 @@ const db = getFirestore(app);
 
 
 
-export{
+export {
     app,
     auth,
     getAuth,
     onAuthStateChanged,
     createUserWithEmailAndPassword,
-    signInWithEmailAndPassword, 
+    signInWithEmailAndPassword,
     signOut,
     storage,
     getStorage,

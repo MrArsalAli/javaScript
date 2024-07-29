@@ -1,49 +1,70 @@
 import {
-    storage,
-    ref,
-    uploadBytes,
-    getDownloadURL,
+    app,
     db,
+    auth,
+    onAuthStateChanged,
+    signOut,
+    doc,
+    setDoc,
+    getDoc,
     getDocs,
     collection,
-    addDoc,
-} from '../utils/utils.js'
+    query,
+    where,
+
+} from '../utils/utils.js' 
 
 
-const uProductContainer = document.getElementById("uProductContainer");
-
-getAllUProducts();
+const uProductContainer = document.getElementById("uProductsContainer")
 
 
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+        const uid = user.uid;
+        getMyProducts(uid);
+    } else {
+       
+        console.log("Signed Out");
 
-async function getAllUProducts() {
-    uProductContainer.innerHTML = "";
+    }
+});
+
+
+
+
+
+
+async function getMyProducts(uid) {
     try {
-        const querySnapshot = await getDocs(collection(db, "uProducts"))
+        const q = query(collection(db, "uProducts"),where("createdBy","==", uid))
+        const querySnapshot = await getDocs(q);
         querySnapshot.forEach((doc) => {
+            uProductContainer.innerHTML = "";
             // alert("getDoc function")
 
             const product = doc.data();
+            
 
-            const { productImage, category, title, price, createdBy, createdByEmail } = product;
+            const { productImage, category, title, price, createdBy, createdByEmail } = product; 
+            console.log(createdBy);
+            
 
-
-            const card = `<div class="inline-block m-4">
-            <a class="inline-block relative h-48 rounded overflow-hidden">
-              <img style="width: 250px; height: 200px; object-fit: cover;" alt="ecommerce" class="object-cover object-center w-full h-full block" src="${productImage}">
+            const card = `<div class="mx-4 inline-block my-4">
+            <a class="block relative h-48 rounded overflow-hidden">
+              <img style="width: 300px; height: 240px; object-fit: cover;" alt="ecommerce" class="object-cover object-center w-full h-full block" src="${productImage}">
             </a>
-            <div class="mt-4">
-              <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">${category}</h3>
-              <h2 class="text-gray-900 title-font text-lg font-medium">${title}</h2>
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">${category}</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">${title}</h2>
               <p class="mt-1">$ ${price}.0</p>
-            </div>
-          </div>`
+              <a href="#">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+           </div>`
 
-            uProductContainer.innerHTML += card;
+           uProductsContainer.innerHTML += card;
 
         })
     } catch (err) {
         alert(err);
     }
 }
-
