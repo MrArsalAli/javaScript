@@ -9,6 +9,7 @@ import {
     getDoc,
     getDocs,
     collection,
+    onSnapshot, 
 
 } from './utils/utils.js'
 
@@ -17,6 +18,26 @@ const logOutBtn = document.getElementById("logOutBtn")
 const userImage = document.getElementById("userImage")
 const userImgDiv = document.getElementById("userImgDiv")
 let products_Container = document.getElementById("productsContainer")
+const productsRef = collection(db, "uProducts")
+
+
+
+getRealTimeDataFromFs();
+function getRealTimeDataFromFs(){
+    const unsub = onSnapshot(productsRef, (snapshots) => {
+        console.log(snapshots.empty);
+        if(!snapshots.empty){
+            snapshots.forEach((doc)=>{
+                console.log(doc.data());
+                
+            })
+        }
+      });
+};
+   
+      
+
+
 
 
 
@@ -62,7 +83,7 @@ async function getAllProducts() {
         querySnapshot.forEach((doc) => {
             // alert("getDoc function")
             const product = doc.data();
-            const { productImage, category, title, price, createdBy , createdByEmail} = product;
+            const { productImage, category, title, price, createdBy, createdByEmail } = product;
             const card = `<div class="mx-4 inline-block my-4">
             <a class="block relative h-48 rounded overflow-hidden">
               <img style="width: 300px; height: 240px; object-fit: cover;" alt="ecommerce" class="object-cover object-center w-full h-full block" src="${productImage}">

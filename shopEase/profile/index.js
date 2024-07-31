@@ -11,19 +11,20 @@ import {
     collection,
     query,
     where,
+} from '../utils/utils.js'
 
-} from '../utils/utils.js' 
 
-
-const uProductContainer = document.getElementById("uProductsContainer")
+const uProductsContainer = document.getElementById("uProductsContainer")
 
 
 onAuthStateChanged(auth, (user) => {
     if (user) {
         const uid = user.uid;
-        getMyProducts(uid);
+        getMyProducts(uid);  
+        console.log(uid);
+        
+        
     } else {
-       
         console.log("Signed Out");
 
     }
@@ -36,18 +37,22 @@ onAuthStateChanged(auth, (user) => {
 
 async function getMyProducts(uid) {
     try {
-        const q = query(collection(db, "uProducts"),where("createdBy","==", uid))
+        const q = query(collection(db, "uProducts"), where("createdBy", "==", uid))
         const querySnapshot = await getDocs(q);
         querySnapshot.forEach((doc) => {
-            uProductContainer.innerHTML = "";
+            uProductsContainer.innerHTML = "";
             // alert("getDoc function")
 
             const product = doc.data();
+
+            console.log(doc.data());
             
 
-            const { productImage, category, title, price, createdBy, createdByEmail } = product; 
-            console.log(createdBy);
             
+
+
+            const { productImage, category, title, price, createdBy, createdByEmail, uid } = product;
+
 
             const card = `<div class="mx-4 inline-block my-4">
             <a class="block relative h-48 rounded overflow-hidden">
@@ -66,5 +71,7 @@ async function getMyProducts(uid) {
         })
     } catch (err) {
         alert(err);
+        console.log(err);
+        
     }
 }

@@ -43,6 +43,8 @@ signUpForm.addEventListener('submit', function (e) {
         lastName,
         number,
         companyNum,
+        createdBy,
+        createdByEmail,
     }
 
 

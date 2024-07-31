@@ -24,6 +24,7 @@ import {
     collection,
     query,
     where,
+    onSnapshot, 
 } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
 
 const firebaseConfig = {
@@ -68,6 +69,7 @@ export {
     collection,
     query,
     where,
+    onSnapshot, 
 
 
 
